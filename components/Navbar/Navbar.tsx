@@ -7,11 +7,27 @@ import styles from './Navbar.module.css';
 
 export default function Navbar() {
   const [menuAbierto, setMenuAbierto] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const cerrarMobile = () => {
+    setMobileOpen(false);
+    setMenuAbierto(null);
+  };
 
   return (
     <header className={styles.header}>
       {/* TOP BAR */}
       <div className={styles.topBar}>
+        <button
+          className={styles.hamburguesa}
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Menú"
+        >
+          <span className={mobileOpen ? styles.abierto : ''}></span>
+          <span className={mobileOpen ? styles.abierto : ''}></span>
+          <span className={mobileOpen ? styles.abierto : ''}></span>
+        </button>
+
         <div className={styles.buscador}>
           <input type="text" placeholder="Buscar" className={styles.inputBuscador} />
           <svg className={styles.iconoBusqueda} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -40,7 +56,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MENU BAR */}
+      {/* MENU BAR DESKTOP */}
       <nav className={styles.menuBar}>
         <Link href="/" className={`${styles.menuItem} ${styles.activo}`}>
           INICIO
@@ -93,6 +109,17 @@ export default function Navbar() {
         <Link href="/nosotros" className={styles.menuItem}>NOSOTROS</Link>
         <Link href="/contacto" className={styles.menuItem}>CONTACTO</Link>
       </nav>
+
+      {/* MENU MOBILE */}
+      {mobileOpen && (
+        <div className={styles.menuMobile}>
+          <Link href="/" onClick={cerrarMobile} className={styles.mobileItem}>INICIO</Link>
+          <Link href="/damas" onClick={cerrarMobile} className={styles.mobileItem}>DAMAS</Link>
+          <Link href="/hombres" onClick={cerrarMobile} className={styles.mobileItem}>HOMBRES</Link>
+          <Link href="/nosotros" onClick={cerrarMobile} className={styles.mobileItem}>NOSOTROS</Link>
+          <Link href="/contacto" onClick={cerrarMobile} className={styles.mobileItem}>CONTACTO</Link>
+        </div>
+      )}
     </header>
   );
 }

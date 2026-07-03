@@ -2,16 +2,16 @@
   width: 100%;
   background: #1a0a0a;
   color: #ffffff;
-  padding: 56px 48px 20px;
+  padding: 40px 20px 20px;
   font-family: var(--font-sans);
 }
 
 .contenido {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1.2fr;
-  gap: 48px;
+  grid-template-columns: 1fr;
+  gap: 32px;
   max-width: 1400px;
-  margin: 0 auto 32px;
+  margin: 0 auto 24px;
 }
 
 .columna {
@@ -21,7 +21,7 @@
 }
 
 .logo {
-  width: 160px;
+  width: 140px;
   height: auto;
   object-fit: contain;
   border-radius: 4px;
@@ -71,15 +71,22 @@
   font-size: 10px;
   color: #8a6a6a;
   margin: 0;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .footer {
-    padding: 40px 20px 20px;
+    padding: 56px 48px 20px;
   }
   .contenido {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    grid-template-columns: 1.6fr 1fr 1.2fr;
+    gap: 48px;
+    margin-bottom: 32px;
+  }
+  .logo {
+    width: 160px;
+  }
+  .copyright p {
+    letter-spacing: 2px;
   }
 }

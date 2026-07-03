@@ -16,9 +16,7 @@ export default function Categorias() {
           />
           <div className={styles.overlay}></div>
           <div className={styles.contenido}>
-            <h2 className={styles.titulo}>Damas</h2>
-            <p className={styles.subtitulo}>EXPLORAR COLECCIÓN</p>
-            <span className={styles.boton}>VER MÁS</span>
+            <span className={styles.boton}>EXPLORAR COLECCIÓN</span>
           </div>
         </Link>
 
@@ -32,9 +30,7 @@ export default function Categorias() {
           />
           <div className={styles.overlay}></div>
           <div className={styles.contenido}>
-            <h2 className={styles.titulo}>Hombres</h2>
-            <p className={styles.subtitulo}>EXPLORAR COLECCIÓN</p>
-            <span className={styles.boton}>VER MÁS</span>
+            <span className={styles.boton}>EXPLORAR COLECCIÓN</span>
           </div>
         </Link>
       </div>
