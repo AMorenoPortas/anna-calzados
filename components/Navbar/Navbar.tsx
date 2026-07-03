@@ -1,0 +1,98 @@
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import styles from './Navbar.module.css';
+
+export default function Navbar() {
+  const [menuAbierto, setMenuAbierto] = useState<string | null>(null);
+
+  return (
+    <header className={styles.header}>
+      {/* TOP BAR */}
+      <div className={styles.topBar}>
+        <div className={styles.buscador}>
+          <input type="text" placeholder="Buscar" className={styles.inputBuscador} />
+          <svg className={styles.iconoBusqueda} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
+
+        <Link href="/" className={styles.logoLink}>
+          <Image
+            src="/logo.jpeg"
+            alt="Anna Calzados"
+            width={280}
+            height={120}
+            className={styles.logo}
+            priority
+          />
+        </Link>
+
+        <div className={styles.local}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a1a1a" strokeWidth="2">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>VISITÁ NUESTRO LOCAL</span>
+        </div>
+      </div>
+
+      {/* MENU BAR */}
+      <nav className={styles.menuBar}>
+        <Link href="/" className={`${styles.menuItem} ${styles.activo}`}>
+          INICIO
+        </Link>
+
+        <div
+          className={styles.menuItemDropdown}
+          onMouseEnter={() => setMenuAbierto('damas')}
+          onMouseLeave={() => setMenuAbierto(null)}
+        >
+          <Link href="/damas" className={styles.menuItem}>
+            DAMAS
+            <svg className={styles.chevron} width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </Link>
+          {menuAbierto === 'damas' && (
+            <div className={styles.dropdown}>
+              <Link href="/damas/atomik" className={styles.dropdownItem}>Atomik</Link>
+              <Link href="/damas/generico" className={styles.dropdownItem}>Genérico</Link>
+              <Link href="/damas/jaguar" className={styles.dropdownItem}>Jaguar</Link>
+              <Link href="/damas/maraton" className={styles.dropdownItem}>Maratón</Link>
+              <Link href="/damas/urbano" className={styles.dropdownItem}>Urbano</Link>
+            </div>
+          )}
+        </div>
+
+        <div
+          className={styles.menuItemDropdown}
+          onMouseEnter={() => setMenuAbierto('hombres')}
+          onMouseLeave={() => setMenuAbierto(null)}
+        >
+          <Link href="/hombres" className={styles.menuItem}>
+            HOMBRES
+            <svg className={styles.chevron} width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </Link>
+          {menuAbierto === 'hombres' && (
+            <div className={styles.dropdown}>
+              <Link href="/hombres/atomik" className={styles.dropdownItem}>Atomik</Link>
+              <Link href="/hombres/head" className={styles.dropdownItem}>Head</Link>
+              <Link href="/hombres/head-2" className={styles.dropdownItem}>Head 2</Link>
+              <Link href="/hombres/kappa" className={styles.dropdownItem}>Kappa</Link>
+              <Link href="/hombres/maraton" className={styles.dropdownItem}>Maratón</Link>
+            </div>
+          )}
+        </div>
+
+        <Link href="/nosotros" className={styles.menuItem}>NOSOTROS</Link>
+        <Link href="/contacto" className={styles.menuItem}>CONTACTO</Link>
+      </nav>
+    </header>
+  );
+}
