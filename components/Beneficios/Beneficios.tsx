@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Beneficios.module.css';
 
 const items = [
@@ -41,9 +41,15 @@ const items = [
 export default function Beneficios() {
   const [actual, setActual] = useState(0);
 
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setActual((prev) => (prev + 1) % items.length);
+    }, 3000);
+    return () => clearInterval(intervalo);
+  }, []);
+
   return (
     <section className={styles.beneficios}>
-      {/* MOBILE: carrusel */}
       <div className={styles.carrusel}>
         <div className={styles.item}>
           {items[actual].icono}
@@ -64,7 +70,6 @@ export default function Beneficios() {
         </div>
       </div>
 
-      {/* DESKTOP: fila */}
       <div className={styles.fila}>
         {items.map((item, i) => (
           <div key={i} className={styles.filaItem}>
