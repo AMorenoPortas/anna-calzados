@@ -123,253 +123,253 @@ export const productos: Producto[] = [
   },
   {
     "id": 17,
-    "nombre": "Generico 1",
-    "marca": "Generico",
+    "nombre": "Colección Anna 1",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-1.png"
   },
   {
     "id": 18,
-    "nombre": "Generico 10",
-    "marca": "Generico",
+    "nombre": "Colección Anna 10",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-10.png"
   },
   {
     "id": 19,
-    "nombre": "Generico 11",
-    "marca": "Generico",
+    "nombre": "Colección Anna 11",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-11.png"
   },
   {
     "id": 20,
-    "nombre": "Generico 12",
-    "marca": "Generico",
+    "nombre": "Colección Anna 12",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-12.png"
   },
   {
     "id": 21,
-    "nombre": "Generico 13",
-    "marca": "Generico",
+    "nombre": "Colección Anna 13",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-13.png"
   },
   {
     "id": 22,
-    "nombre": "Generico 14",
-    "marca": "Generico",
+    "nombre": "Colección Anna 14",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-14.png"
   },
   {
     "id": 23,
-    "nombre": "Generico 15",
-    "marca": "Generico",
+    "nombre": "Colección Anna 15",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-15.png"
   },
   {
     "id": 24,
-    "nombre": "Generico 16",
-    "marca": "Generico",
+    "nombre": "Colección Anna 16",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-16.png"
   },
   {
     "id": 25,
-    "nombre": "Generico 17",
-    "marca": "Generico",
+    "nombre": "Colección Anna 17",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-17.png"
   },
   {
     "id": 26,
-    "nombre": "Generico 18",
-    "marca": "Generico",
+    "nombre": "Colección Anna 18",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-18.png"
   },
   {
     "id": 27,
-    "nombre": "Generico 19",
-    "marca": "Generico",
+    "nombre": "Colección Anna 19",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-19.png"
   },
   {
     "id": 28,
-    "nombre": "Generico 2",
-    "marca": "Generico",
+    "nombre": "Colección Anna 2",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-2.png"
   },
   {
     "id": 29,
-    "nombre": "Generico 20",
-    "marca": "Generico",
+    "nombre": "Colección Anna 20",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-20.png"
   },
   {
     "id": 30,
-    "nombre": "Generico 21",
-    "marca": "Generico",
+    "nombre": "Colección Anna 21",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-21.png"
   },
   {
     "id": 31,
-    "nombre": "Generico 22",
-    "marca": "Generico",
+    "nombre": "Colección Anna 22",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-22.png"
   },
   {
     "id": 32,
-    "nombre": "Generico 23",
-    "marca": "Generico",
+    "nombre": "Colección Anna 23",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-23.png"
   },
   {
     "id": 33,
-    "nombre": "Generico 24",
-    "marca": "Generico",
+    "nombre": "Colección Anna 24",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-24.png"
   },
   {
     "id": 34,
-    "nombre": "Generico 25",
-    "marca": "Generico",
+    "nombre": "Colección Anna 25",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-25.png"
   },
   {
     "id": 35,
-    "nombre": "Generico 26",
-    "marca": "Generico",
+    "nombre": "Colección Anna 26",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-26.png"
   },
   {
     "id": 36,
-    "nombre": "Generico 27",
-    "marca": "Generico",
+    "nombre": "Colección Anna 27",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-27.png"
   },
   {
     "id": 37,
-    "nombre": "Generico 28",
-    "marca": "Generico",
+    "nombre": "Colección Anna 28",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-28.png"
   },
   {
     "id": 38,
-    "nombre": "Generico 29",
-    "marca": "Generico",
+    "nombre": "Colección Anna 29",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-29.png"
   },
   {
     "id": 39,
-    "nombre": "Generico 3",
-    "marca": "Generico",
+    "nombre": "Colección Anna 3",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-3.png"
   },
   {
     "id": 40,
-    "nombre": "Generico 30",
-    "marca": "Generico",
+    "nombre": "Colección Anna 30",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-30.png"
   },
   {
     "id": 41,
-    "nombre": "Generico 31",
-    "marca": "Generico",
+    "nombre": "Colección Anna 31",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-31.png"
   },
   {
     "id": 42,
-    "nombre": "Generico 32",
-    "marca": "Generico",
+    "nombre": "Colección Anna 32",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-32.png"
   },
   {
     "id": 43,
-    "nombre": "Generico 33",
-    "marca": "Generico",
+    "nombre": "Colección Anna 33",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-33.png"
   },
   {
     "id": 44,
-    "nombre": "Generico 34",
-    "marca": "Generico",
+    "nombre": "Colección Anna 34",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-34.png"
   },
   {
     "id": 45,
-    "nombre": "Generico 35",
-    "marca": "Generico",
+    "nombre": "Colección Anna 35",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-35.png"
   },
   {
     "id": 46,
-    "nombre": "Generico 36",
-    "marca": "Generico",
+    "nombre": "Colección Anna 36",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-36.png"
   },
   {
     "id": 47,
-    "nombre": "Generico 4",
-    "marca": "Generico",
+    "nombre": "Colección Anna 4",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-4.png"
   },
   {
     "id": 48,
-    "nombre": "Generico 5",
-    "marca": "Generico",
+    "nombre": "Colección Anna 5",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-5.png"
   },
   {
     "id": 49,
-    "nombre": "Generico 6",
-    "marca": "Generico",
+    "nombre": "Colección Anna 6",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-6.png"
   },
   {
     "id": 50,
-    "nombre": "Generico 7",
-    "marca": "Generico",
+    "nombre": "Colección Anna 7",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-7.png"
   },
   {
     "id": 51,
-    "nombre": "Generico 8",
-    "marca": "Generico",
+    "nombre": "Colección Anna 8",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-8.png"
   },
   {
     "id": 52,
-    "nombre": "Generico 9",
-    "marca": "Generico",
+    "nombre": "Colección Anna 9",
+    "marca": "Colección Anna",
     "seccion": "damas",
     "imagen": "/productos/damas/generico/modelo-9.png"
   },

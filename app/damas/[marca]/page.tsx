@@ -8,26 +8,31 @@ interface Props {
   params: Promise<{ marca: string }>;
 }
 
-const marcasValidas = ['atomik', 'generico', 'jaguar', 'maraton', 'urbano'];
+const marcasMap: Record<string, string> = {
+  atomik: 'Atomik',
+  generico: 'Colección Anna',
+  jaguar: 'Jaguar',
+  maraton: 'Maraton',
+  urbano: 'Urbano',
+};
 
 export default async function DamasMarcaPage({ params }: Props) {
   const { marca } = await params;
+  const nombreMarca = marcasMap[marca];
 
-  if (!marcasValidas.includes(marca)) {
+  if (!nombreMarca) {
     notFound();
   }
 
   const productosFiltrados = productos.filter(
-    (p) => p.seccion === 'damas' && p.marca.toLowerCase() === marca.toLowerCase()
+    (p) => p.seccion === 'damas' && p.marca === nombreMarca
   );
-
-  const nombreMarca = marca.charAt(0).toUpperCase() + marca.slice(1);
 
   return (
     <main>
       <Navbar />
       <ListadoProductos
-        titulo={`Damas · ${nombreMarca}`}
+        titulo={`Mujeres · ${nombreMarca}`}
         productos={productosFiltrados}
       />
       <Footer />

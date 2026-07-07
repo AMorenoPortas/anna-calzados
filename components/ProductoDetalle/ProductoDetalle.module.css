@@ -311,3 +311,129 @@
     letter-spacing: 2.5px;
   }
 }
+
+.lupa {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  width: 100%;
+  position: relative;
+  max-height: 90vh;
+}
+
+.cerrar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.modalImagen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  background: #f8f5f2;
+}
+
+.modalInfo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modalMarca {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #7a1a1a;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.modalNombre {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: #1a1a1a;
+  margin: 0 0 12px;
+}
+
+.modalBoton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: #7a1a1a;
+  border: 1px solid #7a1a1a;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.modalBoton:hover {
+  background: #7a1a1a;
+  color: #ffffff;
+}
+
+@media (min-width: 640px) {
+  .modal {
+    flex-direction: row;
+    max-width: 560px;
+  }
+
+  .modalImagen {
+    width: 55%;
+    aspect-ratio: auto;
+    min-height: 300px;
+  }
+
+  .modalInfo {
+    flex: 1;
+    justify-content: center;
+  }
+}

@@ -13,9 +13,8 @@ export default function ListadoProductos({ titulo, subtitulo, productos }: Props
   return (
     <section className={styles.listado}>
       <div className={styles.encabezado}>
-        <div className={styles.tituloBox}>
-          <h1 className={styles.titulo}>{titulo}</h1>
-        </div>
+        <h1 className={styles.titulo}>{titulo}</h1>
+        <div className={styles.linea}></div>
         {subtitulo && <p className={styles.subtitulo}>{subtitulo}</p>}
       </div>
 

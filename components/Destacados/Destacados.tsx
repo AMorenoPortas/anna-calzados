@@ -12,15 +12,6 @@ export default function Destacados() {
 
   return (
     <section className={styles.destacados}>
-      <div className={styles.tituloWrapper}>
-        <div className={styles.tituloBox}>
-          <h2 className={styles.titulo}>Destacados de la temporada</h2>
-        </div>
-        <p className={styles.subtitulo}>
-          Diseños pensados para acompañarte en cada paso. Calidad y estilo en cada modelo.
-        </p>
-      </div>
-
       <div className={styles.grid}>
         {productosDestacados.map((producto) => (
           <Link

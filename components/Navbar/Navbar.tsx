@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import Buscador from '@/components/Buscador/Buscador';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -28,12 +29,8 @@ export default function Navbar() {
           <span className={mobileOpen ? styles.abierto : ''}></span>
         </button>
 
-        <div className={styles.buscador}>
-          <input type="text" placeholder="Buscar" className={styles.inputBuscador} />
-          <svg className={styles.iconoBusqueda} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <circle cx="11" cy="11" r="8"/>
-            <path d="m21 21-4.35-4.35"/>
-          </svg>
+        <div className={styles.buscadorWrapper}>
+          <Buscador />
         </div>
 
         <Link href="/" className={styles.logoLink}>
@@ -52,7 +49,7 @@ export default function Navbar() {
             <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
             <circle cx="12" cy="10" r="3"/>
           </svg>
-          <span>VISITÁ NUESTRO LOCAL</span>
+          <span>Desde 1970 en Don Torcuato</span>
         </div>
       </div>
 
@@ -68,7 +65,7 @@ export default function Navbar() {
           onMouseLeave={() => setMenuAbierto(null)}
         >
           <Link href="/damas" className={styles.menuItem}>
-            DAMAS
+            MUJERES
             <svg className={styles.chevron} width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="m6 9 6 6 6-6"/>
             </svg>
@@ -76,10 +73,11 @@ export default function Navbar() {
           {menuAbierto === 'damas' && (
             <div className={styles.dropdown}>
               <Link href="/damas/atomik" className={styles.dropdownItem}>Atomik</Link>
-              <Link href="/damas/generico" className={styles.dropdownItem}>Genérico</Link>
+              <Link href="/damas/generico" className={styles.dropdownItem}>Colección Anna</Link>
               <Link href="/damas/jaguar" className={styles.dropdownItem}>Jaguar</Link>
               <Link href="/damas/maraton" className={styles.dropdownItem}>Maratón</Link>
               <Link href="/damas/urbano" className={styles.dropdownItem}>Urbano</Link>
+              <Link href="/damas" className={`${styles.dropdownItem} ${styles.dropdownTodo}`}>Ver todo</Link>
             </div>
           )}
         </div>
@@ -102,22 +100,21 @@ export default function Navbar() {
               <Link href="/hombres/head-2" className={styles.dropdownItem}>Head 2</Link>
               <Link href="/hombres/kappa" className={styles.dropdownItem}>Kappa</Link>
               <Link href="/hombres/maraton" className={styles.dropdownItem}>Maratón</Link>
+              <Link href="/hombres" className={`${styles.dropdownItem} ${styles.dropdownTodo}`}>Ver todo</Link>
             </div>
           )}
         </div>
-
-        <Link href="/nosotros" className={styles.menuItem}>NOSOTROS</Link>
-        <Link href="/contacto" className={styles.menuItem}>CONTACTO</Link>
       </nav>
 
       {/* MENU MOBILE */}
       {mobileOpen && (
         <div className={styles.menuMobile}>
+          <div className={styles.mobileBuscador}>
+            <Buscador />
+          </div>
           <Link href="/" onClick={cerrarMobile} className={styles.mobileItem}>INICIO</Link>
           <Link href="/damas" onClick={cerrarMobile} className={styles.mobileItem}>DAMAS</Link>
           <Link href="/hombres" onClick={cerrarMobile} className={styles.mobileItem}>HOMBRES</Link>
-          <Link href="/nosotros" onClick={cerrarMobile} className={styles.mobileItem}>NOSOTROS</Link>
-          <Link href="/contacto" onClick={cerrarMobile} className={styles.mobileItem}>CONTACTO</Link>
         </div>
       )}
     </header>

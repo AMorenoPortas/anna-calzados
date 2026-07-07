@@ -1,0 +1,104 @@
+.beneficios {
+  width: 100%;
+  background: #faf8f6;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  margin: 24px auto 0;
+}
+
+/* MOBILE: carrusel */
+.carrusel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.titulo {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.subtitulo {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+}
+
+.puntos {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.punto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.puntoActivo {
+  background: #7a1a1a;
+}
+
+/* DESKTOP: fila */
+.fila {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .carrusel {
+    display: none;
+  }
+
+  .fila {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 40px 48px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .filaItem {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    justify-content: center;
+    position: relative;
+  }
+
+  .divisor {
+    width: 1px;
+    height: 40px;
+    background: #ddd;
+    flex-shrink: 0;
+    margin: 0 24px;
+  }
+}

@@ -1,0 +1,156 @@
+.buscador {
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  font-family: var(--font-sans);
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 8px 0;
+  transition: border-color 0.2s;
+}
+
+.inputWrapper:focus-within {
+  border-color: #7a1a1a;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+  font-family: var(--font-sans);
+  min-width: 0;
+}
+
+.input::placeholder {
+  color: #999;
+  letter-spacing: 0.5px;
+}
+
+.icono {
+  color: #1a1a1a;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+/* Dropdown de resultados */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-top: 3px solid #7a1a1a;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 300;
+  max-height: 480px;
+  overflow-y: auto;
+  min-width: 340px;
+}
+
+.header {
+  padding: 10px 16px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #7a1a1a;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: #faf5f5;
+  border-bottom: 1px solid #ececec;
+}
+
+.resultado {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f5f5f5;
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: background 0.2s;
+}
+
+.resultado:hover {
+  background: #faf5f5;
+}
+
+.resultado:last-child {
+  border-bottom: none;
+}
+
+.imagenWrapper {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  background: #f8f5f2;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.imagen {
+  object-fit: contain;
+  padding: 4px;
+}
+
+.textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.marcaResultado {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #7a1a1a;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.nombreResultado {
+  font-size: 13px;
+  color: #1a1a1a;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.seccion {
+  font-size: 10px;
+  color: #999;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sinResultados {
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.sinResultados p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.sinResultadosHint {
+  font-size: 11px !important;
+  color: #888 !important;
+  margin-top: 8px !important;
+  line-height: 1.5;
+}

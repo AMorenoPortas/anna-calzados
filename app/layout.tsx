@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Marcellus, Montserrat } from "next/font/google";
+import FloatingButtons from "@/components/FloatingButtons/FloatingButtons";
 import "./globals.css";
 
 const marcellus = Marcellus({
@@ -27,9 +28,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body className={`${marcellus.variable} ${montserrat.variable}`}>
+    <html lang="es" className={`${marcellus.variable} ${montserrat.variable}`}>
+      <body className={montserrat.className}>
         {children}
+        <FloatingButtons />
       </body>
     </html>
   );

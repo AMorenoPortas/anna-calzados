@@ -10,7 +10,7 @@ export default function DamasPage() {
     <main>
       <Navbar />
       <ListadoProductos
-        titulo="Damas"
+        titulo="Mujeres"
         subtitulo="Descubrí toda nuestra colección para damas. Estilo y calidad en cada modelo."
         productos={productosDamas}
       />

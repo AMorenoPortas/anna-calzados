@@ -16,7 +16,6 @@ export default async function ProductoPage({ params }: Props) {
     notFound();
   }
 
-  // Productos relacionados: misma marca, distinto id
   const relacionados = productos
     .filter((p) => p.marca === producto.marca && p.id !== producto.id)
     .slice(0, 4);

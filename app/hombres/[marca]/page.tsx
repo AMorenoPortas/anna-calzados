@@ -8,23 +8,25 @@ interface Props {
   params: Promise<{ marca: string }>;
 }
 
-const marcasValidas = ['atomik', 'head', 'head-2', 'kappa', 'maraton'];
+const marcasMap: Record<string, string> = {
+  atomik: 'Atomik',
+  head: 'Head',
+  'head-2': 'Head 2',
+  kappa: 'Kappa',
+  maraton: 'Maraton',
+};
 
 export default async function HombresMarcaPage({ params }: Props) {
   const { marca } = await params;
+  const nombreMarca = marcasMap[marca];
 
-  if (!marcasValidas.includes(marca)) {
+  if (!nombreMarca) {
     notFound();
   }
 
   const productosFiltrados = productos.filter(
-    (p) => p.seccion === 'hombres' && p.marca.toLowerCase() === marca.toLowerCase()
+    (p) => p.seccion === 'hombres' && p.marca === nombreMarca
   );
-
-  const nombreMarca = marca
-    .split('-')
-    .map((p) => p.charAt(0).toUpperCase() + p.slice(1))
-    .join(' ');
 
   return (
     <main>

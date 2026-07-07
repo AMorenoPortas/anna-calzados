@@ -22,9 +22,9 @@ export default function ProductoDetalle({ producto, relacionados }: Props) {
       <div className={styles.breadcrumb}>
         <Link href="/">Inicio</Link>
         <span>/</span>
-        <Link href={`/${producto.seccion}`}>{seccionNombre}</Link>
-        <span>/</span>
-        <span className={styles.actual}>{producto.marca}</span>
+        <Link href={`/${producto.seccion}/${producto.marca.toLowerCase().replace(/ /g, '-')}`} className={styles.actual}>
+          {producto.marca}
+        </Link>
       </div>
 
       <div className={styles.contenido}>
@@ -51,7 +51,7 @@ export default function ProductoDetalle({ producto, relacionados }: Props) {
           <div className={styles.botones}>
             
             <a
-              href={`https://wa.me/5491100000000?text=${mensajeWhatsApp}`}
+              href={`https://wa.me/5491171554603?text=${mensajeWhatsApp}`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.botonPrincipal}
@@ -59,11 +59,14 @@ export default function ProductoDetalle({ producto, relacionados }: Props) {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
               </svg>
-              CONSULTAR POR WHATSAPP
+              CONSULTANOS
             </a>
 
-            <Link href={`/${producto.seccion}`} className={styles.botonSecundario}>
-              VOLVER A {seccionNombre.toUpperCase()}
+            <Link
+              href={producto.seccion === 'destacados' ? '/damas' : `/${producto.seccion}`}
+              className={styles.botonSecundario}
+            >
+              VER COLECCIÓN COMPLETA
             </Link>
           </div>
 
@@ -74,6 +77,15 @@ export default function ProductoDetalle({ producto, relacionados }: Props) {
                 <circle cx="12" cy="10" r="3"/>
               </svg>
               <span>Retirá en nuestro local</span>
+            </div>
+            <div className={styles.detalleItem}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7a1a1a" strokeWidth="2">
+                <rect x="1" y="3" width="15" height="13"/>
+                <path d="M16 8h4l3 3v5h-7V8z"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+              <span>Enviamos tu compra</span>
             </div>
             <div className={styles.detalleItem}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7a1a1a" strokeWidth="2">
