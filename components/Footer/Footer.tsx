@@ -21,7 +21,7 @@ export default function Footer() {
 
         <div className={styles.columna}>
           <h3 className={styles.tituloColumna}>NAVEGAR</h3>
-          <Link href="/damas" className={styles.link}>Mujeres</Link>
+          <Link href="/damas" className={styles.link}>Damas</Link>
           <Link href="/hombres" className={styles.link}>Hombres</Link>
         </div>
 

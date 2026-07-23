@@ -32,7 +32,7 @@ export default async function DamasMarcaPage({ params }: Props) {
     <main>
       <Navbar />
       <ListadoProductos
-        titulo={`Mujeres · ${nombreMarca}`}
+        titulo={`Damas · ${nombreMarca}`}
         productos={productosFiltrados}
       />
       <Footer />

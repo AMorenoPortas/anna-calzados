@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Marcellus, Montserrat } from "next/font/google";
 import FloatingButtons from "@/components/FloatingButtons/FloatingButtons";
+import Mantenimiento from "@/components/Mantenimiento/Mantenimiento";
 import "./globals.css";
 
 const marcellus = Marcellus({
@@ -22,6 +23,8 @@ export const metadata: Metadata = {
   description: "Tienda de calzados para damas y hombres. Calidad y estilo en cada modelo.",
 };
 
+const sitioActivo = process.env.NEXT_PUBLIC_SITIO_ACTIVO === "true";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,8 +33,14 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${marcellus.variable} ${montserrat.variable}`}>
       <body className={montserrat.className}>
-        {children}
-        <FloatingButtons />
+        {sitioActivo ? (
+          <>
+            {children}
+            <FloatingButtons />
+          </>
+        ) : (
+          <Mantenimiento />
+        )}
       </body>
     </html>
   );

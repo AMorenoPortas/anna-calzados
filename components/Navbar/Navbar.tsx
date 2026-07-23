@@ -65,7 +65,7 @@ export default function Navbar() {
           onMouseLeave={() => setMenuAbierto(null)}
         >
           <Link href="/damas" className={styles.menuItem}>
-            MUJERES
+            DAMAS
             <svg className={styles.chevron} width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="m6 9 6 6 6-6"/>
             </svg>
